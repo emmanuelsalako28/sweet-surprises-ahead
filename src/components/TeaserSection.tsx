@@ -21,7 +21,7 @@ const teasers = [
 
 const TeaserSection = () => {
   return (
-    <section className="py-16 md:py-24 px-4">
+    <section className="py-10 md:py-14 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-foreground mb-4 animate-fade-in-up">
