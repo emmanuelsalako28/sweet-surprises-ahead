@@ -9,11 +9,11 @@ const CountdownTimer = () => {
   });
 
   useEffect(() => {
-    const valentinesDay = new Date("2026-02-14T00:00:00");
+    const launchDay = new Date("2026-02-02T00:00:00");
 
     const calculateTimeLeft = () => {
       const now = new Date();
-      const difference = valentinesDay.getTime() - now.getTime();
+      const difference = launchDay.getTime() - now.getTime();
 
       if (difference > 0) {
         setTimeLeft({
