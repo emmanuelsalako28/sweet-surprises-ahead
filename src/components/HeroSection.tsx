@@ -4,7 +4,7 @@ import CountdownTimer from "./CountdownTimer";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 overflow-hidden gradient-romantic">
+    <section className="relative flex flex-col items-center justify-center px-4 py-12 md:py-16 overflow-hidden gradient-romantic">
       {/* Decorative background elements */}
       <div className="absolute top-10 left-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-48 h-48 bg-accent/10 rounded-full blur-3xl" />
@@ -57,15 +57,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in-up animation-delay-1000">
-        <div className="flex flex-col items-center gap-2 text-muted-foreground">
-          <span className="text-xs font-body uppercase tracking-wider">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-muted-foreground/40 rounded-full flex justify-center pt-2">
-            <div className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce" />
-          </div>
-        </div>
-      </div>
     </section>
   );
 };

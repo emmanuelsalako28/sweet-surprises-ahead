@@ -3,7 +3,7 @@ import lifestyleImage from "@/assets/romantic-lifestyle.jpg";
 
 const VisualSection = () => {
   return (
-    <section className="py-16 md:py-24 px-4 overflow-hidden">
+    <section className="py-10 md:py-14 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-foreground mb-4">
