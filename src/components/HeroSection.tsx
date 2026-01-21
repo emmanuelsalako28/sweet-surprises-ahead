@@ -15,7 +15,7 @@ const HeroSection = () => {
         <img 
           src={logo} 
           alt="Brand Logo" 
-          className="h-14 md:h-20 w-auto"
+          className="h-20 md:h-28 w-auto"
         />
       </div>
 
@@ -41,20 +41,20 @@ const HeroSection = () => {
           <Heart className="w-4 h-4 text-primary animate-pulse-soft" fill="currentColor" />
         </div>
 
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mb-4 opacity-0 animate-fade-in-up animation-delay-200">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mb-6 opacity-0 animate-fade-in-up animation-delay-200">
           Something Sweet
           <br />
           <span className="text-primary">Is Coming</span> 💖
         </h1>
 
-        <p className="text-lg md:text-xl text-muted-foreground font-body max-w-xl mx-auto mb-12 opacity-0 animate-fade-in-up animation-delay-300">
+        <div className="opacity-0 animate-fade-in-up animation-delay-300 mb-8">
+          <CountdownTimer />
+        </div>
+
+        <p className="text-lg md:text-xl text-muted-foreground font-body max-w-xl mx-auto opacity-0 animate-fade-in-up animation-delay-500">
           This Valentine's, prepare for surprises that'll make hearts skip a beat. 
           <span className="italic"> The reveal is almost here...</span>
         </p>
-
-        <div className="opacity-0 animate-fade-in-up animation-delay-500">
-          <CountdownTimer />
-        </div>
       </div>
 
     </section>

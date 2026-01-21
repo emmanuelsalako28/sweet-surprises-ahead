@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import FloatingHearts from "@/components/FloatingHearts";
 import HeroSection from "@/components/HeroSection";
 import TeaserSection from "@/components/TeaserSection";
-import VisualSection from "@/components/VisualSection";
 
 const Index = () => {
   useEffect(() => {
@@ -37,8 +36,6 @@ const Index = () => {
       <HeroSection />
 
       <TeaserSection />
-
-      <VisualSection />
     </main>
   );
 };
