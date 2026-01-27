@@ -4,18 +4,25 @@ import CountdownTimer from "./CountdownTimer";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center px-4 py-12 md:py-16 overflow-hidden gradient-romantic">
-      {/* Decorative background elements */}
-      <div className="absolute top-10 left-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-48 h-48 bg-accent/10 rounded-full blur-3xl" />
-      <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-primary/10 rounded-full blur-2xl" />
+    <section className="relative flex flex-col items-center justify-center px-4 py-12 md:py-16 overflow-hidden">
+      {/* Romantic gradient background with pattern */}
+      <div className="absolute inset-0 gradient-romantic" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,hsl(var(--primary)/0.15)_0%,transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,hsl(var(--accent)/0.2)_0%,transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--gold)/0.08)_0%,transparent_40%)]" />
+      
+      {/* Decorative blur orbs */}
+      <div className="absolute top-10 left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl animate-pulse-soft" />
+      <div className="absolute bottom-20 right-10 w-56 h-56 bg-accent/15 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 right-1/4 w-32 h-32 bg-gold/10 rounded-full blur-2xl animate-pulse-soft" style={{ animationDelay: '1s' }} />
 
-      {/* Logo */}
-      <div className="mb-8 opacity-0 animate-fade-in-up">
+      {/* Logo with enhanced visibility */}
+      <div className="relative mb-8 opacity-0 animate-fade-in-up">
+        <div className="absolute inset-0 bg-white/60 rounded-2xl blur-xl scale-110" />
         <img 
           src={logo} 
           alt="Brand Logo" 
-          className="h-20 md:h-28 w-auto"
+          className="relative h-24 md:h-32 w-auto drop-shadow-lg"
         />
       </div>
 
