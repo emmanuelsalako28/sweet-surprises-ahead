@@ -1,20 +1,40 @@
 import { Heart } from "lucide-react";
+import { useEffect, useState } from "react";
 import logo from "@/assets/logo.gif";
 import heroCouple from "@/assets/hero-couple.png";
 import CountdownTimer from "./CountdownTimer";
 
 const HeroSection = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section className="relative flex flex-col items-center justify-center px-4 py-12 md:py-16 overflow-hidden min-h-[500px] md:min-h-[600px]">
-      {/* Background image */}
+    <section className="relative flex flex-col items-center justify-center px-4 py-12 md:py-16 overflow-hidden min-h-[400px] md:min-h-[550px]">
+      {/* Parallax Background image - positioned to show model's head */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroCouple})` }}
+        className="absolute inset-0 bg-cover bg-no-repeat"
+        style={{ 
+          backgroundImage: `url(${heroCouple})`,
+          backgroundPosition: 'center 15%',
+          transform: `translateY(${scrollY * 0.3}px)`,
+          willChange: 'transform'
+        }}
       />
       
-      {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background/90" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,hsl(var(--primary)/0.1)_0%,transparent_60%)]" />
+      {/* Overlay for readability - softer on mobile */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/85 md:from-background/75 md:via-background/55 md:to-background/80" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,hsl(var(--primary)/0.08)_0%,transparent_60%)]" />
+      
+      {/* Smooth bottom blend/fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 md:h-40 bg-gradient-to-t from-background via-background/90 to-transparent" />
       
       {/* Decorative blur orbs */}
       <div className="absolute top-10 left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl animate-pulse-soft" />
