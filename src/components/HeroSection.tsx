@@ -58,7 +58,7 @@ const HeroSection = () => {
           <CountdownTimer />
         </div>
 
-        <p className="text-lg md:text-xl text-muted-foreground font-body max-w-xl mx-auto opacity-0 animate-fade-in-up animation-delay-500">
+        <p className="text-base md:text-xl text-muted-foreground font-body max-w-xl mx-auto px-4 md:px-0 opacity-0 animate-fade-in-up animation-delay-500">
           This Valentine's, prepare for surprises that'll make hearts skip a beat. 
           <span className="italic"> The reveal is almost here...</span>
         </p>
