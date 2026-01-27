@@ -39,17 +39,17 @@ const CountdownTimer = () => {
   ];
 
   return (
-    <div className="w-full max-w-xl mx-auto">
-      <div className="grid grid-cols-4 gap-3 md:gap-6">
+    <div className="w-full max-w-xl mx-auto px-2">
+      <div className="grid grid-cols-4 gap-2 sm:gap-4 md:gap-6">
         {timeUnits.map((unit) => (
           <div
             key={unit.label}
-            className="flex flex-col items-center p-3 md:p-5 bg-card/80 backdrop-blur-sm rounded-xl shadow-romantic border border-border/50 transition-transform hover:scale-105"
+            className="flex flex-col items-center p-2 sm:p-3 md:p-5 bg-card/90 backdrop-blur-sm rounded-xl shadow-romantic border border-primary/20 transition-transform hover:scale-105"
           >
-            <span className="text-2xl md:text-5xl font-display font-bold text-primary animate-pulse-soft">
+            <span className="text-xl sm:text-2xl md:text-5xl font-display font-bold text-primary animate-pulse-soft">
               {String(unit.value).padStart(2, "0")}
             </span>
-            <span className="text-xs md:text-sm font-body text-muted-foreground uppercase tracking-wider mt-1">
+            <span className="text-[10px] sm:text-xs md:text-sm font-body text-muted-foreground uppercase tracking-wider mt-1">
               {unit.label}
             </span>
           </div>
