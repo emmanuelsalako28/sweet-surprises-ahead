@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Cormorant Garamond', 'serif'],
-        body: ['Lato', 'sans-serif'],
+        display: ['Gotham', 'Montserrat', 'Century Gothic', 'Segoe UI', 'sans-serif'],
+        body: ['Gotham', 'Montserrat', 'Century Gothic', 'Segoe UI', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
