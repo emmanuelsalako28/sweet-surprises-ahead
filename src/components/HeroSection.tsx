@@ -5,10 +5,16 @@ import CountdownTimer from "./CountdownTimer";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center px-4 py-8 md:py-12 overflow-hidden">
-      {/* Soft romantic gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-background to-background" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,hsl(var(--primary)/0.08)_0%,transparent_60%)]" />
+    <section className="relative flex flex-col items-center justify-center px-4 py-12 md:py-16 overflow-hidden min-h-[500px] md:min-h-[600px]">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroCouple})` }}
+      />
+      
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background/90" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,hsl(var(--primary)/0.1)_0%,transparent_60%)]" />
       
       {/* Decorative blur orbs */}
       <div className="absolute top-10 left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl animate-pulse-soft" />
@@ -37,13 +43,13 @@ const HeroSection = () => {
           />
         </div>
 
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4 opacity-0 animate-fade-in-up animation-delay-100">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full mb-4 opacity-0 animate-fade-in-up animation-delay-100">
           <Heart className="w-4 h-4 text-primary animate-pulse-soft" fill="currentColor" />
           <span className="text-sm font-body text-primary font-semibold tracking-wide">Valentine's Day 2026</span>
           <Heart className="w-4 h-4 text-primary animate-pulse-soft" fill="currentColor" />
         </div>
 
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4 opacity-0 animate-fade-in-up animation-delay-200 tracking-tight">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4 opacity-0 animate-fade-in-up animation-delay-200 tracking-tight drop-shadow-sm">
           Something Sweet
           <br />
           <span className="text-primary">Is Coming</span> 💖
@@ -53,20 +59,10 @@ const HeroSection = () => {
           <CountdownTimer />
         </div>
 
-        <p className="text-base md:text-lg text-muted-foreground font-body max-w-xl mx-auto px-4 md:px-0 opacity-0 animate-fade-in-up animation-delay-500 mb-8">
+        <p className="text-base md:text-lg text-muted-foreground font-body max-w-xl mx-auto px-4 md:px-0 opacity-0 animate-fade-in-up animation-delay-500">
           This Valentine's, prepare for surprises that'll make hearts skip a beat. 
           <span className="italic"> The reveal is almost here...</span>
         </p>
-
-        {/* Hero couple image */}
-        <div className="relative opacity-0 animate-fade-in-up animation-delay-700">
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 pointer-events-none" />
-          <img 
-            src={heroCouple} 
-            alt="Couple celebrating Valentine's Day" 
-            className="relative mx-auto w-full max-w-sm md:max-w-md lg:max-w-lg h-auto drop-shadow-2xl"
-          />
-        </div>
       </div>
     </section>
   );
