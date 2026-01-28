@@ -24,9 +24,6 @@ const TeaserSection = () => {
     <section className="pt-10 pb-4 md:pt-14 md:pb-8 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-foreground mb-4 animate-fade-in-up">
-            A Little Hint of What's to Come
-          </h2>
           <p className="text-muted-foreground font-body text-lg opacity-0 animate-fade-in-up animation-delay-200">
             Love deserves the extraordinary...
           </p>
