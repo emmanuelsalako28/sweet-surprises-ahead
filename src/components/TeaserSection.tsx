@@ -21,7 +21,7 @@ const teasers = [
 
 const TeaserSection = () => {
   return (
-    <section className="py-10 md:py-14 px-4">
+    <section className="pt-10 pb-4 md:pt-14 md:pb-8 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-foreground mb-4 animate-fade-in-up">
@@ -49,7 +49,7 @@ const TeaserSection = () => {
           ))}
         </div>
 
-        <p className="text-center mt-12 text-muted-foreground font-body text-base md:text-lg opacity-0 animate-fade-in-up animation-delay-500">
+        <p className="text-center mt-8 md:mt-10 text-muted-foreground font-body text-base md:text-lg opacity-0 animate-fade-in-up animation-delay-500">
           Stay tuned... the magic unfolds soon ✨
         </p>
       </div>
